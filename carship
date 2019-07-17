@@ -1,0 +1,34 @@
+#! /Users/account/.rbenv/shims/ruby
+require 'optparse'
+require_relative 'carship'
+require_relative 'race'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: example.rb [options]"
+
+  opts.on('-h') do |d|
+    p Carship.methods
+    exit
+  end
+end.parse!
+
+if File.exist? 'carship_state'
+    f = File.binread('carship_state')
+    ship = Marshal.load(f)
+else
+    ship = Carship.new
+end
+
+COMMAND = ARGV[0]
+
+if ship.respond_to?(COMMAND)
+    v = ship.send(COMMAND)
+    p v if v
+
+    f = File.new('carship_state', 'wb')
+    f.write(Marshal.dump(ship))
+    f.close
+else
+    p 'ERROR: ship does not respond to that command'
+end
