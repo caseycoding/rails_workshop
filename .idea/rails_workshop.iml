@@ -7,7 +7,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="rbenv: 2.3.8" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.0.1, rbenv: 2.3.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.17.3, rbenv: 2.3.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, rbenv: 2.3.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.3, rbenv: 2.3.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, rbenv: 2.3.8) [gem]" level="application" />
